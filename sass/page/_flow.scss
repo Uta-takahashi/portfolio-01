@@ -1,0 +1,59 @@
+// flow
+
+.flow {
+    display: flex;
+    align-items: center;
+    background-color: $color-background;
+    height: 64px;
+
+    &-number {
+        display: inline-block;
+        color: #fff;
+        background-color: $color-accent;
+        width: 7.1112%;
+        height: 100%;
+        line-height: 64px;
+        text-align: center;
+
+        @include mq(sp) {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+
+    &-title {
+        font-weight: 700;
+        position: relative;
+        padding-left: 2.3334%;
+        padding-right: 1rem;
+        width: 23.7778%;
+
+        @include mq(pc) {
+            font-size: 1.8rem;
+        }
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 150%;
+            background-color: #C3C3C3;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &-desc {
+        padding-left: 6%;
+        flex: 1;
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+        }
+    }
+}

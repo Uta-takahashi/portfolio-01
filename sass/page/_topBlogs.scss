@@ -1,0 +1,21 @@
+// topBlogs
+
+.topBlogs {
+    @include mq(pc) {
+        width: 47.7778%;
+    }
+
+    @include mq(sp) {
+        padding-bottom: 6rem;
+    }
+
+    &-title {
+        @include section-title(3.2rem);
+        padding-bottom: 3.5rem;
+        
+        @include mq(pc) {
+            text-align: left;
+        }
+    }
+
+}

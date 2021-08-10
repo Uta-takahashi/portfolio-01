@@ -1,0 +1,38 @@
+@import './mq';
+@import '../setting/config';
+
+@mixin header-btn($bg-color: $color-main) {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: $bg-color;
+    width: 142px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .3s;
+
+    @include mq(sp) {
+        width: 124px;
+        line-height: 44px;
+    }
+}
+
+@mixin request-btn($width: 260px, $height: 60px) {
+    display: inline-block;
+    color: #fff;
+    background-color: $color-accent;
+    max-width: $width;
+    width: 100%;
+    line-height: $height;
+    text-align: center;
+    border-radius: 100px;
+    transition: all .3s;
+
+    @include mq(pc) {
+        &:hover {
+            background-color: #cc8512;    
+        }
+    }
+}
+

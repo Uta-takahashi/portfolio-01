@@ -1,0 +1,24 @@
+
+
+// レイアウト幅
+$layout-width-inner: 900px;
+
+// ブレークポイント
+$breakpoints: (
+	"sp": "(max-width: 767px)",
+	"tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+	"tab": "(max-width: #{$layout-width-inner - 1px})",
+	"pc": "(min-width: 768px)",
+	"pc-only": "(min-width: #{$layout-width-inner})",
+	"header-layout" : "(min-width: #{$layout-width-inner}) and (max-width: 1000px)",
+	// "retina": "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)",
+);
+
+//サイトで使用するカラー
+$color-main: #1B224C;
+$color-accent: #F5A623;
+$color-background: #f8f8f8;
+$color-text: #1B224C;
+
+// フォント
+$font-family-default: "游ゴシック体", "Yu Gothic", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;;

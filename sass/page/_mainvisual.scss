@@ -1,0 +1,79 @@
+// mianvisual
+
+.mainvisual {
+    background: url(../img/fv.jpg) no-repeat center center / cover;
+
+    @include mq(sp) {
+        margin-top: 56px;
+    }
+
+    &-inner {
+        @include inner;
+        text-align: center;
+
+        @include mq(pc) {
+            padding-top: 11rem;
+            padding-bottom: 8.2rem;
+        }
+
+        @include mq(sp) {
+            padding-top: 8rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+    &-heading {
+        color: #fff;
+        text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        letter-spacing: 1px;
+
+        @include mq(pc) {
+            font-size: 4.8rem;
+            padding-bottom: 2.5rem;
+        }
+
+        @include mq(sp) {
+            font-size: 3.6rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &-text {
+        color: #fff;
+        font-size: 1.8rem;
+        line-height: 1.7222;
+
+        @include mq(pc) {
+            padding-bottom: 4.8rem;
+        }
+
+        @include mq(sp) {
+            padding-bottom: 3rem;
+        }
+    }
+
+    &-btn {
+        
+        &._request {
+            padding-bottom: 2.2rem;
+
+            a {
+                @include request-btn;
+            }
+        }
+
+        &._contact {
+            a {
+                color: #fff;
+                text-decoration: underline;
+                transition: all .3s;
+
+                @include mq(pc) {
+                    &:hover {
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+}

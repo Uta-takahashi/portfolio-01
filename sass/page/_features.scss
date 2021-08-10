@@ -1,0 +1,29 @@
+// features
+
+.features {
+
+    &-inner {
+        @include inner;
+        padding-top: 6rem;
+        padding-bottom: 9.3rem;
+    }
+
+    &-title {
+        @include section-title;
+        padding-bottom: 6rem;
+    }
+
+    &-list {
+        @include mq(sp) {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &-item {
+        + .features-item {
+            padding-top: 6rem;
+        }
+    }
+
+}

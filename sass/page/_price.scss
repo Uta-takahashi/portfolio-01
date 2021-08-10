@@ -1,0 +1,70 @@
+// price
+
+.price {
+
+    &-inner {
+        @include inner;
+        padding-top: 5.8rem;
+        padding-bottom: 9rem;
+    }
+
+    &-title {
+        @include section-title($color-main, 3.2rem);
+        padding-bottom: 6rem;
+
+        @include mq(sp) {
+            padding-bottom: 5rem;
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 4.6rem;
+    }
+
+    &-item {
+        font-size: 2.2rem;
+        color: #fff;
+        background-color: $color-main;
+        padding: 3.4rem 0;
+        max-width: 280px;
+        width: 100%;
+        text-align: center;
+
+        @include mq(sp) {
+            font-size: 1.8rem;
+            max-width: 240px;
+        }
+    }
+
+    &-plus {
+        padding: 0 4.9rem;
+        position: relative;
+
+        @include mq(sp) {
+            padding: 0 3rem;
+        }
+        
+        span {
+            position: absolute;
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-main;
+
+            + span {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+
+    &-text {
+        line-height: 1.6875;
+    }
+
+}

@@ -1,0 +1,25 @@
+// category
+
+.category {
+
+    &-heading {
+        @include sidebar-title;
+    }
+
+    &-name {
+        line-height: 2;
+
+        a {
+            color: $color-main;
+            font-weight: 700;
+        }
+    }
+
+    //子要素(カテゴリ)
+    .children {
+        .category-name {
+            padding-left: 1.5rem;
+        }
+    }
+
+}

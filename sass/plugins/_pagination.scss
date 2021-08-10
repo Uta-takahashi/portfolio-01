@@ -1,0 +1,56 @@
+// pagination
+
+.pagination {
+	text-align: center;
+}
+
+.page-numbers {
+	text-align: center;
+	display: inline-block;
+	font-size: 2rem;
+    color: $color-main;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border: $color-main solid 1px;
+	transition: opacity .3s;
+	
+	&.current {
+		cursor: default;
+		color: #fff;
+		background: $color-main;
+	}
+
+    &.dot {
+        border: none;
+    }
+
+	&.prev, &.next {
+		display: none;
+	}
+	
+	@include mq(pc) {
+		&:not(.current) {
+			&:not(.dot) {
+				&:hover  {
+					opacity: .6;
+				}
+			}
+		}
+	}
+
+    @include mq(sp) {
+        font-size: 1.6rem;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+	+ .page-numbers {
+		margin-left: 1.5rem;
+
+        @include mq(sp) {
+            margin-left: 1rem;
+        }
+	}
+}

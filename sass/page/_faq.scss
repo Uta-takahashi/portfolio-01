@@ -1,0 +1,16 @@
+// faq
+
+.faq {
+
+    &-inner {
+        @include inner;
+        padding-top: 7.5rem;
+    }
+
+    &-title {
+        @include section-title;
+        padding-bottom: 3.3rem;
+        border-bottom: 1px solid $color-main;
+    }
+
+}

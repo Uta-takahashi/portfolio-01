@@ -1,0 +1,51 @@
+// relationArticle
+
+.relationArticle {
+
+    &-heading {
+        @include sidebar-title;
+    }
+
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4.2rem;
+        transition: opacity .3s;
+
+        @include mq(sp) {
+            padding-bottom: 2.8rem;
+        }
+
+        &:hover {
+            @include mq(pc) {
+                opacity: .6;
+            }
+        }
+    }
+
+    &-img {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 37.0371%;
+
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 70%;
+        }
+    }
+
+    &-body {
+        width: 56.2963%;
+    }
+
+    &-title {
+        font-size: 1.2rem;
+        line-height: 2;
+        color: $color-main;
+        text-decoration: underline;
+    }
+
+}

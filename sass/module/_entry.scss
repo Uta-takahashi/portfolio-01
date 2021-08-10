@@ -1,0 +1,214 @@
+// entry
+
+.entry {
+
+    &-category {
+        @include category-label(31px, 100px);
+        max-width: 100px;
+        margin-bottom: 3rem;
+
+        @include mq(sp) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        padding-bottom: 2rem;
+        line-height: 1.7;
+
+        @include mq(sp) {
+            font-size: 2.4rem;
+        }
+
+        ._news & {
+            padding-bottom: 3.6rem;
+
+            @include mq(sp) {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2.5rem;
+
+        ._news & {
+            display: block;
+            padding-bottom: 6rem;
+
+            @include mq(sp) {
+                padding-bottom: 3rem;
+            }
+        }
+    }
+
+    &-cdate {
+        text-align: right;
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+        }
+
+        ._news & {
+            text-align: right;
+        }
+    }
+
+    &-img {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 4rem;
+
+        @include mq(sp) {
+            margin-bottom: 3rem;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 62.7119%;
+        }
+    }
+
+    //投稿内容のレイアウト
+    &-body {
+        padding-bottom: 6rem;
+
+        @include mq(sp) {
+            padding-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+    
+            @include mq(sp) {
+                font-size: 2.4rem;
+            }
+        }
+    
+        h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.5;
+            padding-left: 1rem;
+            margin-bottom: 3rem;
+            border-left: 4px solid $color-main;
+    
+            @include mq(sp) {
+                font-size: 2rem;
+            }
+        }
+    
+        p {
+            line-height: 1.5;
+            margin-bottom: 4rem;
+    
+            a {
+                font-size: 1.8rem;
+                color: $color-accent;
+                text-decoration: underline;
+                transition: all .3s;
+    
+                &:hover {
+                    @include mq(pc) {
+                        color: #cc8512;
+                    }
+                }
+    
+                @include mq(sp) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    
+        blockquote {
+            background-color: $color-background;
+            padding: 2.7rem 2.5rem 3rem 7.4rem;
+            margin-bottom: 3rem;
+            position: relative;
+    
+            @include mq(sp) {
+                padding: 2.4rem 2rem 2.4rem 6rem;
+            }
+    
+            &::before {
+                display: inline-block;
+                position: absolute;
+                content: "\f10d";
+                font-family: "Font Awesome 5 Free";
+                // background-color: #B4B4B4;
+                color: #B4B4B4;
+                top: 27px;
+                left: 25px;
+                font-size: 25px;
+                line-height: 1;
+                font-weight: 900;
+    
+                @include mq(sp) {
+                    font-size: 20px;
+                    left: 20px;   
+                }
+            }
+    
+            p {
+                margin: 0;
+            }
+        }
+    
+        figure {
+            display: block;
+            margin-bottom: 3rem;
+            width: 100% !important;
+    
+            ._news & {
+                
+                img {
+                    max-width: 400px;
+                    max-height: 250px;
+                }
+            }
+        }
+    
+        ul {
+            margin-bottom: 3rem;
+    
+            li {
+                padding-left: 3.2rem;
+                line-height: 1.5;
+                position: relative;
+    
+                @include mq(sp) {
+                    font-size: 1.6rem;
+                    padding-left: 2rem;
+                }
+    
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 11px;
+                    height: 11px;
+                    left: 0;
+                    top: 6.5px;
+                    background-color: $color-accent;
+                    border-radius: 50%;
+    
+                    @include mq(sp) {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}

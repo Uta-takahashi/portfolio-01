@@ -1,0 +1,77 @@
+// pickupArticle
+
+.pickupArticle {
+
+    &-heading {
+        font-size: 2.6rem;
+        font-weight: 700;
+        padding-bottom: 3rem;
+
+        @include mq(sp) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &-list {
+        @include mq(sp) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        color: $color-main;
+        padding-bottom: 2.8rem;
+    }
+
+    &-img {
+        width: 35.5933%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 60.9524%;
+        }
+    }
+
+    &-category {
+        @include category-label;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &-body {
+        width: 58.9831%;
+    }
+
+    &-cdate {
+        padding-bottom: 3rem;
+
+        @include mq(tab) {
+            padding-bottom: 2rem;
+        }
+
+        @include mq(sp) {
+            font-size: 1.2rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.5;
+        text-decoration: underline;
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+        }
+    }
+
+}

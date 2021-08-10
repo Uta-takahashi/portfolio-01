@@ -1,0 +1,63 @@
+// about
+
+.about {
+    background-color: $color-main;
+    
+    &-inner {
+        text-align: center;
+        @include inner;
+        padding-top: 6.2rem;
+        padding-bottom: 5.4rem;
+    }
+    
+    &-heading {
+        color: #fff;
+        font-weight: 700;
+
+        @include mq(pc) {
+            font-size: 3.6rem;
+            padding-bottom: 6.5rem;
+        }
+
+        @include mq(sp) {
+            font-size: 2.8rem;
+            padding-bottom: 4rem;
+        }
+    }
+    
+    &-texts {
+        color: #fff;
+        
+        @include mq(pc) {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 8.2rem;
+        }
+
+        @include mq(sp) {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &-text {
+        font-size: 1.8rem;
+
+        @include mq(pc) {
+            line-height: 2.1667;
+
+            &:nth-child(2) {
+                padding-left: 5.7rem;
+            }
+
+            &:nth-child(3) {
+                padding-left: 3rem;
+            }
+        }
+
+        @include mq(sp) {
+            + .about-text {
+                padding-top: 2rem;
+            }
+        }
+    }
+}

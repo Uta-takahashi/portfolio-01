@@ -1,0 +1,63 @@
+// accordion
+
+.accordion {
+    border-bottom: 1px solid $color-main;
+
+    &-head {
+        cursor: pointer;
+        padding: 2.5rem 2rem 2.5rem 0;
+        position: relative;
+
+        @include mq(sp) {
+            padding: 1.5rem 3.2rem 1.5rem 0;
+            line-height: 1.5;
+        }
+
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            width: 25px;
+            height: 3px;
+            top: 50%;
+            right: 2.2222%;
+            background-color: $color-main;
+            transition: all .3s;
+
+            @include mq(sp) {
+                width: 18px;
+            }
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+
+        &._active {
+            &::after {
+                transform: rotate(0);
+            }
+        }
+
+    }
+    
+    &-body {
+        background: $color-background;
+        
+        @include mq(pc) {
+            padding: 2.5rem 0 2.5rem 2.6rem;
+            margin-bottom: 1.6rem;
+        }
+
+        @include mq(sp) {
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+    }
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+        .accordion-body {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+// flows
+
+.flows {
+
+    &-inner {
+        @include inner;
+        padding-top: 5.8rem;
+    }
+
+    &-title {
+        @include section-title;
+        padding-bottom: 5.3rem;
+    }
+
+    &-item {
+        + .flows-item {
+            margin-top: .8rem;
+        }
+    }
+
+}

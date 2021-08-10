@@ -1,0 +1,52 @@
+// page404
+
+.page404 {
+    text-align: center;
+
+    @include mq(sp) {
+        margin-top: 56px;
+    }
+
+    &-inner {
+        @include inner;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    &-title {
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+
+        @include mq(sp) {
+            font-size: 4rem;
+        }
+    }
+
+    &-text {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+    }
+
+    &-text2 {
+        font-size: 1.8rem;
+        margin-bottom: 5rem;
+    }
+
+    &-btn {
+        a {
+            display: inline-block;
+            font-size: 2.4rem;
+            line-height: 50px;
+            padding: 0 4rem;
+            background-color: #B4B4B4;
+            color: #fff;
+            border-radius: 5px;
+
+            @include mq(sp) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+}

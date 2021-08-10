@@ -1,0 +1,49 @@
+// cta
+
+.cta {
+    background: url(../img/cta.png) no-repeat center center / cover;
+
+    &-inner {
+        padding-top: 7rem;
+        padding-bottom: 4.2rem;
+        text-align: center;
+    }
+
+    &-heading {
+        @include section-title(#fff, 3.2rem);
+        padding-bottom: 2rem;
+
+        @include mq(sp) {
+            font-size: 2.6rem;
+        }
+    }
+
+    &-btn {
+        &._request {
+            padding-bottom: 2.2rem;
+    
+            a {
+                @include request-btn(280px, 50px);
+
+                @include mq(sp) {
+                    max-width: 240px;
+                }
+            }
+        }
+
+        &._contact {
+            a {
+                color: #fff;
+                text-decoration: underline;
+                transition: all .3s;
+
+                @include mq(pc) {
+                    &:hover {
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+
+}

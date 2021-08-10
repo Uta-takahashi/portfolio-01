@@ -1,0 +1,45 @@
+// breadcrumb
+// wordpress plugin [breadcrumb navxt]使用
+
+.breadcrumb {
+	font-size: 1.2rem;
+	background-color: $color-background;
+
+    &-inner {
+        @include inner;
+        padding-top: 1.9rem;
+        padding-bottom: 1.9rem;
+    }
+
+	span {
+		display: inline-block;
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+
+        &:nth-child(1) {
+            margin-left: 0;
+
+            a {
+                span {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+		a {
+            color: $color-main;
+			transition: opacity .3s;
+            line-height: 1.7;
+
+            @include mq(pc) {
+                &:hover {
+                    opacity: .6;
+                }
+            }
+
+            span {
+                margin: 0;
+            }
+		}
+	}
+}

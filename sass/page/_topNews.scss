@@ -1,0 +1,41 @@
+// topNews
+
+.topNews {
+    @include mq(pc) {
+        padding-left: 7.4445%;
+    }
+
+    &-title {
+        @include section-title(3.2rem);
+        padding-bottom: 3.5rem;
+        
+        @include mq(pc) {
+            text-align: left;
+        }
+    }
+
+    &-item {
+        display: block;
+        transition: opacity .3s;
+
+        &:hover {
+            @include mq(pc) {
+                opacity: .6;
+            }
+        }
+
+        + .topNews-item {
+            padding-top: 2.5rem;
+        }
+    }
+
+    &-cdate {
+        font-size: 1.2rem;
+        padding-bottom: 1.6rem;
+    }
+
+    &-heading {
+        text-decoration: underline;
+    }
+
+}

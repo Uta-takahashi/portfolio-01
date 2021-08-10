@@ -1,0 +1,52 @@
+// models
+
+.models {
+    background-color: $color-main;
+
+    &-inner {
+        @include inner;
+        padding-top: 5.8rem;
+        padding-bottom: 6rem;
+    }
+
+    &-title {
+        @include section-title(#fff);
+
+        @include mq(pc) {
+            padding-bottom: 13.8rem;
+        }
+
+        @include mq(sp) {
+            padding-bottom: 6rem;
+        }
+    }
+
+    &-list {
+        @include mq(pc) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        @include mq(sp) {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &-item {
+        + .models-item {
+            @include mq(pc) {
+                margin-left: 3.3334%;
+            }
+
+            @include mq(sp) {
+                padding-top: 4rem;
+            }
+        }
+
+        @include mq(pc) {
+            width: calc( (100% - 6.6666%) / 3 );
+        }
+    }
+
+}

@@ -1,0 +1,99 @@
+// blog
+
+.blog {
+    color: $color-main;
+    transition: opacity .3s;
+
+    @include mq(pc) {
+        display: flex;
+        // align-items: center;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    + .blog {
+        @include mq(pc) {
+            margin-top: 9.3rem;
+        }
+
+        .blog-img {
+            @include mq(sp) {
+                margin-top: 6rem;
+            }
+        }
+        @include mq(sp) {
+            padding-top: 0;
+        }
+    }
+
+    &-img {
+        width: 240px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 74.5834%;
+        }
+
+        @include mq(sp) {
+            width: 100%;
+        }
+    }
+
+    &-category {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include category-label;
+    }
+
+    &-body {
+        @include mq(pc) {
+            flex: 1;
+            padding-left: 5.5556%;
+        }
+    }
+
+    &-cdate {
+        @include mq(sp) {
+            padding-top: 1.5rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &-title {
+        font-size: 2.6rem;
+        font-weight: 700;
+        line-height: 1.5;
+        text-decoration: underline;
+        padding-top: 2rem;
+
+        @include mq(tab) {
+            font-size: 2.2rem;
+        }
+
+        @include mq(sp) {
+            font-size: 1.8rem;
+            padding-top: 1.5rem;
+        }
+    }
+
+    &-text {
+        line-height: 1.5;
+        padding-top: 2rem;
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+            padding-top: 1.5rem;
+        }
+    }
+
+
+}

@@ -1,0 +1,20 @@
+// newPosts
+
+.newPosts {
+
+    &-inner {
+        @include inner;
+        padding-top: 9rem;
+        padding-bottom: 12rem;
+
+        @include mq(pc) {
+            display: flex;
+        }
+
+        @include mq(sp) {
+            padding-top: 6rem;
+            padding-bottom: 8rem;
+        }
+    }
+
+}

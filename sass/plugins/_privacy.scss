@@ -1,0 +1,71 @@
+// privacy
+
+.privacy {
+    text-align: center;
+    margin-bottom: 4.6rem;
+
+    &-label {
+        position: relative;
+        padding-left: 4rem;
+        line-height: 20px;
+        cursor: pointer;
+
+        @include mq(sp) {
+            font-size: 1.4rem;
+            padding-left: 3rem;
+        }
+    }
+    
+    &-btn {
+        position: absolute;
+        opacity: 0;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+        margin: 0;
+
+        &:checked {
+            opacity: 0;
+            background-color: transparent;
+        }
+    
+        &:focus {
+            border: 1px solid $color-main !important;
+        }
+        
+        &:checked + .privacy-part {
+            border: 1px solid $color-main;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-part {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        top: 50%;
+        left: 4px;
+        border: 1px solid $color-main;
+        transform: translateY(-50%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 15px;
+            border-bottom: 2px solid $color-main;
+            border-right: 2px solid $color-main;
+            top: 0;
+            left: 6px;
+            transform: rotate(45deg);
+            transition: all .2s;
+            opacity: 0;
+        }
+    }
+}

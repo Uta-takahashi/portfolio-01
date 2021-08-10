@@ -1,0 +1,79 @@
+// plans
+
+.plans {
+    overflow-x: scroll;
+
+    &-inner {
+        @include inner;
+        padding-bottom: 6.2em;
+
+        @include mq(sp) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-title {
+        @include section-title($color-main, 3.2rem);
+        padding-bottom: 7rem;
+
+        @include mq(sp) {
+            padding-bottom: 5rem;
+        }
+    }
+
+    &-scroll {
+        @include mq(sp) {
+            padding-left: 2rem;
+            overflow-x:scroll;
+
+            //firefox
+            scrollbar-width: none;
+
+            //chrome,safari
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            z-index: 1;
+        }
+    }
+
+    &-list {
+        display: flex;
+
+        @include mq(pc) {
+            flex-wrap: wrap;
+        }
+
+        @include mq(sp) {
+            width: 778px;
+        }
+    }
+
+    &-item {
+        margin-top: 3.6rem;
+
+        &._recommend {
+            margin-top: 0;
+        }
+
+        @include mq(pc) {
+            width: calc( (100% -  20px) / 4 );
+        }
+
+        @include mq(sp) {
+            max-width: 190px;
+            width: 100%;
+        }
+
+        + .plans-item {
+            margin-left: 6.6px;
+
+            @include mq(sp) {
+                margin-left: 6px;
+            }
+        }
+    }
+
+}

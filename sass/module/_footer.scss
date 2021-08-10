@@ -1,0 +1,86 @@
+// footer
+
+.footer {
+
+    &-bg {
+        background-color: $color-main;
+    }
+
+    &-inner {
+        @include inner;
+        padding-top: 3.5rem;
+        padding-bottom: 7rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include mq(sp) {
+            align-items: center;
+        }
+    }
+
+    &-info {
+        text-align: right;
+    }
+
+    &-logo {
+        background-color: #fff;
+        padding: 1.4rem 1.9rem;
+
+        img {
+            @include mq(pc) {
+                max-width: 159px;
+                width: 100%;
+            }
+
+            @include mq(sp) {
+                max-width: 136px;
+                width: 100%;
+            }
+        }
+    }
+
+    &-tell {
+        display: flex;
+        align-items: center;
+        line-height: 16px;
+        padding-top: 2.7rem;
+        padding-bottom: 1.3rem;
+
+        svg {
+            width: 13px;
+            height: 16px;
+            fill: #fff;
+            margin-right: 0.3rem;
+            margin-left: auto;
+        }
+
+        p {
+            color: #fff;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-time {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    &-footer {
+        @include inner;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    &-copyright {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: right;
+    }
+
+
+
+}

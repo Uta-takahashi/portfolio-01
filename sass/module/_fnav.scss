@@ -1,0 +1,41 @@
+// fnav
+
+.fnav {
+
+    &-list {
+        @include mq(pc) {
+            display: flex;
+        }
+
+        li {
+            + li {
+                @include mq(pc) {
+                    margin-left: 2.1rem;
+                    padding-left: 2.1rem;
+                    border-left: 1px solid #fff;
+                }
+
+                @include mq(sp) {
+                    padding-top: 1.5rem;
+                }
+            }
+        }
+        
+        a {
+            color: #fff;
+            font-weight: 700;
+            transition: opacity .3s;
+            
+            @include mq(pc) {
+                line-height: 23px;
+
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+    }
+
+
+
+}

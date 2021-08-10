@@ -1,0 +1,55 @@
+// topBlog
+
+.topBlog {
+    display: flex;
+    transition: opacity .3s;
+
+    + .topBlog {
+        padding-top: 3.1rem;
+    }
+
+    &:hover {
+        @include mq(pc) {
+            opacity: .6;
+        }
+    }
+
+    &-img {
+        width: 34.8838%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        &::before {
+            display: block;
+            content: "";
+            padding-top: 73.3334%;
+        }
+    }
+
+    &-category {
+        position: absolute;
+        top: 0;
+        @include category-label(23px);
+    }
+
+    &-body {
+        flex: 1;
+        padding-left: 4.6512%;
+        position: relative;
+    }
+
+    &-heading {
+        font-weight: 700;
+        line-height: 1.6875;
+        text-decoration: underline;
+    }
+
+    &-cdate {
+        position: absolute;
+        font-size: 1.2rem;
+        bottom: 0;
+    }
+
+}

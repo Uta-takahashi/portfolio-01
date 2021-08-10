@@ -1,0 +1,44 @@
+// description
+
+.description {
+
+    &-inner {
+        background-color: #fff;
+        padding: 1.2rem 1.6rem;
+    }
+
+    &-content {
+        border: 5px solid $color-main;
+        padding-top: 2.1rem;
+        padding-bottom: 2.4rem;
+    }
+
+    &-heading {
+        line-height: 1.3889;
+        font-weight: 700;
+
+        @include mq(pc) {
+            font-size: 3.6rem;
+            padding-bottom: 2.5rem;
+        }
+
+        @include mq(sp) {
+            font-size: 2.8rem;
+            padding-bottom: 1.5rem;
+        }
+
+        span {
+            background:linear-gradient(transparent 70%, $color-accent 70%);
+        }
+    }
+
+    &-text {
+        font-size: 1.8rem;
+        line-height: 1.7222;
+
+        @include mq(sp) {
+            font-size: 1.6rem;
+        }
+    }
+
+}

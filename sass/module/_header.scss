@@ -1,0 +1,153 @@
+//header
+
+.header {
+
+    @include mq(sp) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    &-inner {
+        padding: 1.5rem 1rem;
+    }
+    
+    &-wrapper {
+        @include mq(pc) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-logo {
+        width: 136px;
+        height: 26px;
+    }
+
+    &-contact {
+        @include mq(pc) {
+            margin-left: auto;
+            display: flex;
+        }
+    }
+
+    &-info {
+        @include mq(pc) {
+            padding-top: 1.4rem;
+            line-height: 36px;
+        }
+
+        @include mq(tab) {
+            padding-top: 0.9rem;
+        }
+    }
+    
+    &-time {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        padding-bottom: .8rem;
+        
+        @include mq(pc) {
+            text-align: right;
+        }
+    }
+    
+    &-tell {
+        display: flex;
+        align-items: center;
+        line-height: 16px;
+        
+        svg {
+            width: 13px;
+            height: 16px;
+            fill: $color-main;
+            margin-right: 0.3rem;
+        }
+        
+        p {
+            @include mq(tab) {
+                font-size: 1.4rem;
+            }
+
+            a {
+                color: $color-text;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-btn {
+        
+        &._request {
+            @include mq(pc) {
+                padding-left: 2rem;
+            }
+
+            @include mq(tab) {
+                padding-left: 1.2rem;
+            }
+
+            a {
+                @include header-btn($color-accent);
+
+                @include mq(pc) {
+                    &:hover {
+                        background-color: #cc8512;
+                    }
+                }
+
+                @include mq(tab) {
+                    font-size: 1.2rem;
+                    width: 90px;
+                    line-height: 44px;
+                }
+            }
+        }
+        
+        &._contact {
+            @include mq(pc) {
+                padding-left: 1rem;
+            }
+
+            a {
+                @include header-btn;
+
+                @include mq(pc) {
+                    &:hover {
+                        background-color: #344296;
+                    }
+                }
+
+                @include mq(tab) {
+                    font-size: 1.2rem;
+                    width: 90px;
+                    line-height: 44px;
+                }
+            }
+        }
+    }
+
+    &-overlay {
+        @include mq(sp) {
+            position: fixed;
+            // display: none;
+            width: 100vw;
+            height: 100vh;
+            top: -100vh;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity .3s;
+    
+            .add-active & {
+                // display: block;
+                top: 0;
+                opacity: 1;
+            }
+        }
+    }
+
+}

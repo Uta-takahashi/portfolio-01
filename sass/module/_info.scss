@@ -1,0 +1,67 @@
+// info
+
+.info {
+
+    &-inner {
+        @include inner;
+    }
+
+    &-body {
+        padding-top: 2.1rem;
+        padding-bottom: 2.4rem;
+
+        @include mq(pc) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-left: -10rem;
+        }
+
+        @include mq(sp) {
+            text-align: center;
+        }
+    }
+
+    &-text {
+        font-weight: 700;
+
+        @include mq(tab) {
+            font-size: 1.4rem;
+        }
+
+        @include mq(sp) {
+            padding-bottom: 2rem;
+        }
+    }
+
+    &-tell {
+        font-size: 3.6rem;
+        font-weight: 700;
+
+        
+
+        @include mq(pc) {
+            padding-left: 2rem;
+            line-height: 33px;
+        }
+
+        @include mq(tab) {
+            font-size: 3.2rem;
+        }
+
+        @include mq(sp) {
+            padding-bottom: 2rem;
+        }
+    }
+
+    &-time {
+        @include mq(pc) {
+            padding-left: 2rem;
+        }
+
+        @include mq(tab) {
+            font-size: 1.4rem;
+        }
+    }
+
+}
